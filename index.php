@@ -1,4 +1,11 @@
 <?php
+
+if(file_exists('install.php'))
+{
+    echo '<strong>Error! Delete file &quot;install.php&quot;</strong>';
+    exit();
+}
+
 /**
  * CodeIgniter
  *
