@@ -7,6 +7,8 @@ This software uses aes-256-cbc encryption, which is the safest at the time of ap
 The account will be encrypted, it will be possible to change the password along with the change of encryption of all added elements, delete the account, generate your own password from among the different characters.
 I recommend using the system. But remember one very important thing. In order to ensure security, the server should have an SSL certificate and you should change the password for your collection at least once a month!
 
+Home page: http://phpbluedragon.eu/documentation/phpbluedragon-passweb/
+
 ## Requirements
 
 The requirements are absolutely without which you can not use the software due to its construction and to facilitate the interface for the user.
