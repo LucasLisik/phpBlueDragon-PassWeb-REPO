@@ -11,7 +11,7 @@
     width: 100%; background-color: #27313D; border-top: solid 3px #2BABD2;">
     <div class="container" style="margin-top: 5px;">
         <div style="padding: 5px; color: #A6A299;">
-        Copyright &copy; 2016-2018 - by 
+        Copyright &copy; 2016-<?php echo date('Y'); ?> - by
         <a href="http://phpbluedragon.eu" target="_blank" style="color: #ffffff;">phpBlueDragon PassWeb</a> | 
         <a href="<?php echo base_url('components'); ?>" style="color: #ffffff;"><?php echo $this->lang->line('a1069'); ?></a> | 
         <a href="<?php echo base_url('about'); ?>" style="color: #ffffff;"><?php echo $this->lang->line('a1105'); ?></a>

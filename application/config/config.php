@@ -532,10 +532,3 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 ?>
-<?php
-
-$config['base_url'] = 'http://localhost/phpbluedragon_pass_web/';
-
-$config['language'] = 'english';
-
-?>

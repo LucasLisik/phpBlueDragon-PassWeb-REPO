@@ -14,8 +14,8 @@ Home page: http://phpbluedragon.eu/documentation/phpbluedragon-passweb/
 The requirements are absolutely without which you can not use the software due to its construction and to facilitate the interface for the user.
 
 - Apache Web server with mod_rewrite module
-- PHP 5.6
-- MySQL 5
+- PHP 7.0.0
+- MySQL/MariaDB 5/10
 
 The work requires (your browser)
 - JavaScript

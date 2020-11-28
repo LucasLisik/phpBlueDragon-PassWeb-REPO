@@ -1,5 +1,7 @@
 <?php
 
+// GitHubProjects/phpBlueDragonPassWeb/
+
 // Pole e-mail
 error_reporting(E_ALL & ~E_NOTICE);
 
@@ -115,12 +117,12 @@ function GetLang($Line)
     	$lang['install_set_language'] = 'Wybierz język: ';
     	$lang['install_nex_step_button'] = 'Następny krok';
     	$lang['install_check_requirements'] = 'Sprawdzenie wymagań';
-    	$lang['install_version_php'] = 'Wersja PHP (przynajmniej 5.5.0): ';
+    	$lang['install_version_php'] = 'Wersja PHP (przynajmniej 7.0.0): ';
     	$lang['install_akcept'] = 'Akceptuje';
     	$lang['install_not_akcept'] = 'Brak lub wersja zbyt niska';
     	$lang['install_function_steam_socket'] = 'Funkcja - stream_socket_client(): ';
     	$lang['install_mod_rewrite'] = 'Mod Rewrite: ';
-    	$lang['install_reqbrief'] = 'Oprócz poniższych wymagań serwerem powinien być <strong>Apache</strong>, potrzebuje modułu: <strong>mod_rewrite</strong> oraz bazę danych <strong>MySQL/MariaDB w wersji 5 lub wyższej</strong>. Po stronie klienta (Twoim) powinna znajdować się przeglądarka potrafiąca obsługiwać funkcje <strong>AJAX (jQuery)</strong> (są to wszystkie najpopularniejsze przeglądarki, pamiętaj o tym aby aktywować <strong>JavaScript</strong>, jeżeli jest nieaktywny).';
+    	$lang['install_reqbrief'] = 'Oprócz poniższych wymagań serwerem powinien być <strong>Apache</strong>, potrzebuje modułu: <strong>mod_rewrite</strong> oraz bazę danych <strong>MySQL/MariaDB w wersji 5/10 lub wyższej</strong>. Po stronie klienta (Twoim) powinna znajdować się przeglądarka potrafiąca obsługiwać funkcje <strong>AJAX (jQuery)</strong> (są to wszystkie najpopularniejsze przeglądarki, pamiętaj o tym aby aktywować <strong>JavaScript</strong>, jeżeli jest nieaktywny).';
     	$lang['install_reqdont'] = 'Serwer nie spełnia wymagań minimalnych - instalacja jest niemożliwa.';
     	$lang['install_mysql_lib'] = 'Biblioteka MySQL/MariaDB: ';
     	$lang['install_config_path'] = 'Konfiguracja ścieżki';
@@ -195,12 +197,12 @@ function GetLang($Line)
         $lang['install_set_language'] = 'Select Language'; 
         $lang['install_nex_step_button'] = 'Next step'; 
         $lang['install_check_requirements'] = 'Checking requirements'; 
-        $lang['install_version_php'] = 'PHP version (at least 5.5.0):'; 
+        $lang['install_version_php'] = 'PHP version (at least 7.0.0):';
         $lang['install_akcept'] = 'Accept'; 
         $lang['install_not_akcept'] = 'None or too low'; 
         $lang['install_function_steam_socket'] = 'Function - stream_socket_client()'; 
         $lang['install_mod_rewrite'] = 'Mod Rewrite'; 
-        $lang['install_reqbrief'] = 'In addition to following the requirements of the server should be <strong>Apache</strong>, needs module: <strong>mod_rewrite</strong> and the database <strong>MySQL/MariaDB version 5 or higher</strong>. On the client side (your) should be the browser that can support the functions of the <strong>AJAX (jQuery)</strong> (they are all popular browsers, remember that to activate <strong>JavaScript</strong> if it is inactive). '; 
+        $lang['install_reqbrief'] = 'In addition to following the requirements of the server should be <strong>Apache</strong>, needs module: <strong>mod_rewrite</strong> and the database <strong>MySQL/MariaDB version 5/10 or higher</strong>. On the client side (your) should be the browser that can support the functions of the <strong>AJAX (jQuery)</strong> (they are all popular browsers, remember that to activate <strong>JavaScript</strong> if it is inactive). ';
         $lang['install_reqdont'] = 'The server does not meet the minimum requirements - installation is not possible.'; 
         $lang['install_mysql_lib'] = 'Library MySQL/MariaDB'; 
         $lang['install_config_path'] = 'Setup path &amp; e-mail address'; 
@@ -555,7 +557,7 @@ if($_POST['step'] == "")
     	echo '<strong>'.GetLang('install_version_php').'</strong><br />';
     	echo phpversion();
     
-    	if (version_compare(PHP_VERSION, '5.5.0') >= 0) 
+    	if (version_compare(PHP_VERSION, '7.0.0') >= 0)
     	{
     		echo '<div style="padding: 10px; color: #27A2CF; font-weight: bold;">'.GetLang('install_akcept').'</div>';
     	}
@@ -989,7 +991,7 @@ $db[\'default\'][\'port\'] = \''.$_POST['dbport'].'\';
 	
     if(mysqli_connect_errno())
     {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        echo "Failed to connect to MySQL/MariaDB: " . mysqli_connect_error();
     }
     
     mysqli_query($ConnectionLink, 'SET NAMES utf8');

@@ -233,11 +233,12 @@
     <div class="container">
     
         <?php
-        
+        /*
         $DontShow = true;
         
         if(!$DontShow)
         {
             ?><div class="alert alert-warning"><?php echo $this->lang->line('a1072'); ?></div><?php
         }
+        */
         ?>
